@@ -60,7 +60,7 @@ class TimeDifference
 
   def humanize
     diff_parts = []
-    in_general.each do |part,quantity|
+    in_general.except(:seconds).each do |part,quantity|
       next if quantity <= 0
       part = part.to_s.humanize
 
